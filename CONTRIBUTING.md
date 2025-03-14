@@ -261,12 +261,13 @@ See [`apm-agent-core/README.md`](apm-agent-core/README.md)
 
 See [`apm-agent-plugins/README.md`](apm-agent-plugins/README.md)
 
+<!-- TO DO: Update when instructions are available -->
 ### Documenting
 
 HTML Documentation is generated from text files stored in `docs` folder using [AsciiDoc](http://asciidoc.org/) format.
 The `configuration.asciidoc` file is generated from running `co.elastic.apm.agent.configuration.ConfigurationExporter`
 (e.g. via `./mvnw -Dsurefire.failIfNoTests=false -Dtest=ConfigurationExporterTest -pl apm-agent -am clean test`
-or on Windows `.\mvnw "-Dsurefire.failIfNoTests=false" "-Dsurefire.failIfNoSpecifiedTests=false" -Dtest=ConfigurationExporterTest -pl apm-agent-builds/apm-agent -am clean test`). 
+or on Windows `.\mvnw "-Dsurefire.failIfNoTests=false" "-Dsurefire.failIfNoSpecifiedTests=false" -Dtest=ConfigurationExporterTest -pl apm-agent-builds/apm-agent -am clean test`).
 All the other asciidoc text files are written manually.
 
 A preview of the documentation is generated for each pull-request.
@@ -292,7 +293,7 @@ If you have access to make releases, the process is as follows:
 For illustration purpose, `1.2.3` will be the target release version, and the git remote will be `upstream`.
 
 1. Check if sonatype is up: https://status.maven.org
-1. Update [`CHANGELOG.asciidoc`](CHANGELOG.asciidoc) to reflect the new version release:
+1. Update [`docs/release-notes/index.md`](docs/release-notes/index.md) to reflect the new version release:
    1. Go over PRs or git log and add bug fixes and features.
    1. Move release notes from the `Unreleased` sub-heading to the correct `[[release-notes-{major}.x]]` sub-heading ([Example PR](https://github.com/elastic/apm-agent-java/pull/1027/files) for 1.13.0 release).
 1. For major releases, [create an issue](https://github.com/elastic/website-requests/issues/new) to request an update of the [EOL table](https://www.elastic.co/support/eol).
