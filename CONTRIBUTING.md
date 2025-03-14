@@ -295,7 +295,7 @@ For illustration purpose, `1.2.3` will be the target release version, and the gi
 1. Check if sonatype is up: https://status.maven.org
 1. Update [`docs/release-notes/index.md`](docs/release-notes/index.md) to reflect the new version release:
    1. Go over PRs or git log and add bug fixes and features.
-   1. Move release notes from the `Unreleased` sub-heading to the correct `[[release-notes-{major}.x]]` sub-heading ([Example PR](https://github.com/elastic/apm-agent-java/pull/1027/files) for 1.13.0 release).
+   1. Move release notes from the `Next version` sub-heading to the relevant version sub-heading.
 1. For major releases, [create an issue](https://github.com/elastic/website-requests/issues/new) to request an update of the [EOL table](https://www.elastic.co/support/eol).
 1. Review Maven project version, you must have `${project.version}` equal to `1.2.3-SNAPSHOT`, `-SNAPSHOT` suffix will be removed during release process.
    1. If needed, use following command to update version - `mvn release:update-versions`, then commit and push changes.
