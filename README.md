@@ -12,7 +12,7 @@ To get notified about new releases, watch this repository for `Releases only`.
 
 ## Documentation
 
-Docs are located [here](https://www.elastic.co/guide/en/apm/agent/java/current/index.html).
+Docs are located [here](https://www.elastic.co/docs/reference/apm/agents/java).
 
 ## Getting Help
 
