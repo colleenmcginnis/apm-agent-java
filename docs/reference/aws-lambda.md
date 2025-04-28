@@ -1,9 +1,6 @@
 ---
 mapped_pages:
   - https://www.elastic.co/guide/en/apm/agent/java/current/aws-lambda.html
-sub:
-  apm-lambda-ext-v: ver-1-5-7
-  apm-java-v: ver-1-52-2
 ---
 
 # Monitoring AWS Lambda Java Functions [aws-lambda]
@@ -46,13 +43,13 @@ To add the layers to your Lambda function through the AWS Management Console:
 3. Choose the *Specify an ARN* radio button
 4. Copy and paste the following ARNs of the {{apm-lambda-ext}} layer and the APM agent layer in the *Specify an ARN* text input:
     * APM Extension layer:
-      ```
+      ```sh subs=true
       arn:aws:lambda:{AWS_REGION}:267093732750:layer:elastic-apm-extension-{{apm-lambda-ext-v}}-{ARCHITECTURE}:1 <1>
       ```
       1. Replace `{AWS_REGION}` with the AWS region of your Lambda function and `{ARCHITECTURE}` with its architecture.
 
     * APM agent layer:
-      ```
+      ```sh subs=true
       arn:aws:lambda:{AWS_REGION}:267093732750:layer:elastic-apm-java-{{apm-java-v}}:1 <1>
       ```
       1. Replace `{AWS_REGION}` with the AWS region of your Lambda function.
@@ -62,7 +59,7 @@ To add the layers to your Lambda function through the AWS Management Console:
 ::::::{tab-item} AWS CLI
 To add the Layer ARNs of the {{apm-lambda-ext}} and the APM agent through the AWS command line interface execute the following command:
 
-```bash
+```bash subs=true
 aws lambda update-function-configuration --function-name yourLambdaFunctionName \
 --layers arn:aws:lambda:{AWS_REGION}:267093732750:layer:elastic-apm-extension-{{apm-lambda-ext-v}}-{ARCHITECTURE}:1 \ <1>
 arn:aws:lambda:{AWS_REGION}:267093732750:layer:elastic-apm-java-{{apm-java-v}}:1 <2>
@@ -74,7 +71,7 @@ arn:aws:lambda:{AWS_REGION}:267093732750:layer:elastic-apm-java-{{apm-java-v}}:1
 ::::::{tab-item} SAM
 In your SAM `template.yml` file add the Layer ARNs of the {{apm-lambda-ext}} and the APM agent as follows:
 
-```yaml
+```yaml subs=true
 ...
 Resources:
   yourLambdaFunction:
@@ -93,7 +90,7 @@ Resources:
 ::::::{tab-item} Serverless
 In your `serverless.yml` file add the Layer ARNs of the {{apm-lambda-ext}} and the APM agent to your function as follows:
 
-```yaml
+```yaml subs=true
 ...
 functions:
   yourLambdaFunction:
@@ -110,7 +107,7 @@ functions:
 ::::::{tab-item} Terraform
 To add the{{apm-lambda-ext}} and the APM agent to your function add the ARNs to the `layers` property in your Terraform file:
 
-```yaml
+```yaml subs=true
 ...
 resource "aws_lambda_function" "your_lambda_function" {
   ...

@@ -16,3 +16,5 @@ subs:
   ecloud:   "Elastic Cloud"
   kib:   "Kibana"
   apm-lambda-ext:   "Elastic APM AWS Lambda extension"
+  apm-lambda-ext-v: ver-1-5-7
+  apm-java-v: ver-1-52-2

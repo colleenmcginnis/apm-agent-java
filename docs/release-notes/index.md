@@ -540,7 +540,7 @@ To check for security updates, go to [Security announcements for the Elastic sta
 **Release date:** December 7, 2021
 
 ### Features and enhancements [elastic-apm-java-agent-1-28-0-features-enhancements]
-* Adding experimental support for [AWS Lambda]/apm-agent-java/docs/reference/aws-lambda.md) - [#1951](https://github.com/elastic/apm-agent-java/pull/1951)
+* Adding experimental support for [AWS Lambda](/reference/aws-lambda.md) - [#1951](https://github.com/elastic/apm-agent-java/pull/1951)
 * Now supporting tomcat 10 - [#2229](https://github.com/elastic/apm-agent-java/pull/2229)
 
 ### Fixes [elastic-apm-java-agent-1-28-0-fixes]
@@ -1062,7 +1062,7 @@ To check for security updates, go to [Security announcements for the Elastic sta
 **Release date:** July 30, 2019
 
 ### Features and enhancements [elastic-apm-java-agent-1-8-0-features-enhancements]
-* Added support for tracking [time spent by span type](docs-contnet://solutions/observability/apm/transactions-ui.md). Can be disabled by setting [`breakdown_metrics`](/reference/config-core.md#config-breakdown-metrics) to `false`.
+* Added support for tracking [time spent by span type](docs-content://solutions/observability/apm/transactions-ui.md). Can be disabled by setting [`breakdown_metrics`](/reference/config-core.md#config-breakdown-metrics) to `false`.
 * Added support for [central configuration](docs-content://solutions/observability/apm/apm-agent-central-configuration.md). Can be disabled by setting [`central_config`](/reference/config-core.md#config-central-config) to `false`.
 * Added support for Spring’s JMS flavor - instrumenting `org.springframework.jms.listener.SessionAwareMessageListener`
 * Added support to legacy ApacheHttpClient APIs (which adds support to Axis2 configured to use ApacheHttpClient)
